@@ -3,11 +3,11 @@
   "version": "0.1.1",
   "private": true,
   "homepage": "https://awais963.github.io/portfolio",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "deploy": "gh-pages -d out"
-  },
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start"
+},
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
     "@hookform/resolvers": "^3.9.1",
@@ -65,7 +65,6 @@
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "gh-pages": "^6.3.0",
     "postcss": "^8.5",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
