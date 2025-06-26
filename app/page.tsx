@@ -6,7 +6,8 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
-
+import { SiFlutter, SiJetpackcompose, SiKotlin, SiFirebase, SiDart, SiSqlite, SiMongodb, SiApple } from "react-icons/si";
+import { FaJava, FaCode, FaDatabase } from "react-icons/fa";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 import {
@@ -386,124 +387,94 @@ export default function Portfolio() {
     setIsSubmitting(false)
   }
  const techStackCarousel = [
-    {
-      category: "Frontend",
-      technologies: [
-        {
-          name: "React",
-          icon: <Code className="text-blue-500" />,
-          description: "A JavaScript library for building user interfaces.",
-          color: "from-blue-500 to-blue-700",
-        },
-        {
-          name: "Flutter",
-          icon: <Smartphone className="text-blue-500" />,
-          description:
-            "Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.",
-          color: "from-blue-500 to-blue-700",
-        },
-        {
-          name: "HTML",
-          icon: <Code className="text-blue-500" />,
-          description: "The standard markup language for creating web pages.",
-          color: "from-blue-500 to-blue-700",
-        },
-        {
-          name: "CSS",
-          icon: <Palette className="text-blue-500" />,
-          description: "The language for styling HTML web pages.",
-          color: "from-blue-500 to-blue-700",
-        },
-      ],
-    },
-    {
-      category: "Backend",
-      technologies: [
-        {
-          name: "Node.js",
-          icon: <Code className="text-green-500" />,
-          description: "An open-source, cross-platform, back-end JavaScript runtime environment.",
-          color: "from-green-500 to-green-700",
-        },
-        {
-          name: "Express.js",
-          icon: <Code className="text-green-500" />,
-          description: "A fast, unopinionated, minimalist web framework for Node.js.",
-          color: "from-green-500 to-green-700",
-        },
-        {
-          name: "Python",
-          icon: <Code className="text-green-500" />,
-          description: "A high-level, general-purpose programming language.",
-          color: "from-green-500 to-green-700",
-        },
-        {
-          name: "Java",
-          icon: <Code className="text-green-500" />,
-          description: "A versatile, object-oriented programming language.",
-          color: "from-green-500 to-green-700",
-        },
-      ],
-    },
-    {
-      category: "Database",
-      technologies: [
-        {
-          name: "MongoDB",
-          icon: <Database className="text-orange-500" />,
-          description: "A cross-platform document-oriented database program.",
-          color: "from-orange-500 to-orange-700",
-        },
-        {
-          name: "PostgreSQL",
-          icon: <Database className="text-orange-500" />,
-          description: "A free and open-source relational database management system.",
-          color: "from-orange-500 to-orange-700",
-        },
-        {
-          name: "MySQL",
-          icon: <Database className="text-orange-500" />,
-          description: "An open-source relational database management system.",
-          color: "from-orange-500 to-orange-700",
-        },
-        {
-          name: "Firebase",
-          icon: <Database className="text-orange-500" />,
-          description: "A platform developed by Google for creating mobile and web applications.",
-          color: "from-orange-500 to-orange-700",
-        },
-      ],
-    },
-    {
-      category: "Cloud",
-      technologies: [
-        {
-          name: "AWS",
-          icon: <Globe className="text-purple-500" />,
-          description: "Amazon's cloud computing platform.",
-          color: "from-purple-500 to-purple-700",
-        },
-        {
-          name: "Google Cloud",
-          icon: <Globe className="text-purple-500" />,
-          description: "Google's suite of cloud computing services.",
-          color: "from-purple-500 to-purple-700",
-        },
-        {
-          name: "Azure",
-          icon: <Globe className="text-purple-500" />,
-          description: "Microsoft's cloud computing platform.",
-          color: "from-purple-500 to-purple-700",
-        },
-        {
-          name: "Heroku",
-          icon: <Globe className="text-purple-500" />,
-          description: "A cloud platform as a service supporting several programming languages.",
-          color: "from-purple-500 to-purple-700",
-        },
-      ],
-    },
-  ]
+  {
+    category: "Mobile Stacks",
+    technologies: [
+      {
+        name: "iOS",
+        description: "Modern iOS UI toolkit using Swift UI",
+        icon: <SiApple className="text-sky-500" />,
+        color: "from-sky-400 to-cyan-400",
+      }, {
+        name: "Flutter",
+        description: "Cross-platform UI framework by Google",
+        icon: <SiFlutter className="text-sky-500" />,
+        color: "from-sky-400 to-cyan-400",
+      },
+      {
+        name: "Jetpack Compose",
+        description: "Modern Android UI toolkit using Kotlin",
+        icon: <SiJetpackcompose className="text-purple-500" />,
+        color: "from-purple-500 to-indigo-500",
+      },
+      {
+        name: "XML Layout",
+        description: "Traditional Android UI layout files",
+        icon: <FaCode className="text-orange-500" />,
+        color: "from-orange-400 to-yellow-400",
+      },
+    ],
+  },
+  {
+    category: "Programming Languages",
+    technologies: [
+      {
+        name: "Kotlin",
+        description: "Modern, concise language for Android",
+        icon: <SiKotlin className="text-purple-600" />,
+        color: "from-purple-600 to-pink-500",
+      },
+      {
+        name: "Java",
+        description: "Classic OOP language for Android and backend",
+        icon: <FaJava className="text-red-500" />,
+        color: "from-red-500 to-orange-500",
+      },
+      {
+        name: "Dart",
+        description: "Language used with Flutter",
+        icon: <SiDart className="text-cyan-500" />,
+        color: "from-cyan-500 to-blue-500",
+      },
+    ],
+  },
+  {
+    category: "Databases & Cloud",
+    technologies: [
+      {
+        name: "Firebase Realtime DB",
+        description: "Cloud-hosted NoSQL database",
+        icon: <SiFirebase className="text-yellow-500" />,
+        color: "from-yellow-400 to-orange-400",
+      },
+      {
+        name: "Firebase Firestore",
+        description: "Scalable NoSQL cloud database",
+        icon: <SiFirebase className="text-orange-500" />,
+        color: "from-orange-400 to-red-400",
+      },
+      {
+        name: "MongoDB",
+        description: "Document database for flexible schemas",
+        icon: <SiMongodb className="text-green-500" />,
+        color: "from-green-400 to-lime-400",
+      },
+      {
+        name: "SQLite",
+        description: "Lightweight embedded SQL DB",
+        icon: <SiSqlite className="text-blue-500" />,
+        color: "from-blue-400 to-sky-400",
+      },
+      {
+        name: "SQLDelight",
+        description: "Typesafe SQL for Android with Kotlin",
+        icon: <FaDatabase className="text-purple-500" />,
+        color: "from-purple-500 to-violet-500",
+      },
+    ],
+  },
+];
+
   const copyToClipboard = (text: string, type: string) => {
     navigator.clipboard.writeText(text).then(() => {
       setCopied(type)
@@ -867,16 +838,18 @@ useEffect(() => {
                       Contact Me <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
 
-                    <Button
-                      variant="outline"
-                      size="lg"
-                      className={`px-6 md:px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 border-2 ${
-                        isDarkMode ? "border-white/20 hover:border-white/40" : "border-black/20 hover:border-black/40"
-                      }`}
-                    >
-                      <Download className="mr-2 h-4 w-4" />
-                      Resume
-                    </Button>
+                    <a href="/Muhammad Awais CV.pdf" download>
+  <Button
+    variant="outline"
+    size="lg"
+    className={`px-6 md:px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 border-2 ${
+      isDarkMode ? "border-white/20 hover:border-white/40" : "border-black/20 hover:border-black/40"
+    }`}
+  >
+    <Download className="mr-2 h-4 w-4" />
+    Resume
+  </Button>
+</a>
                   </div>
                 </div>
               </div>
@@ -961,7 +934,7 @@ useEffect(() => {
                     className={`absolute inset-2 ${isDarkMode ? "bg-black" : "bg-white"} rounded-full overflow-hidden`}
                   >
                     <Image
-                      src="/placeholder.svg?height=300&width=300"
+                      src="/linkedin.png"
                       alt="Developer Profile"
                       width={300}
                       height={300}
@@ -1167,113 +1140,13 @@ useEffect(() => {
           </div>
         </section>
 
-        {/* Projects Section */}
-        <section id="projects" className="min-h-screen py-16 md:py-20 px-4">
-          <div className="w-full max-w-[96%] 2xl:max-w-[96%] mx-auto">
-            <div className="text-center mb-12 md:mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Featured Projects
-              </h2>
-              <p className={`text-lg md:text-xl max-w-2xl mx-auto ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>
-                Showcasing some of my latest mobile applications and development work
-              </p>
-            </div>
-
-            {/* Desktop Grid */}
-            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {projects.map((project, index) => (
-                <Card
-                  key={project.title}
-                  className={`group ${isDarkMode ? "bg-white/5 border-white/10" : "bg-black/5 border-black/10"} backdrop-blur-sm border overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-105`}
-                >
-                  <div className="relative overflow-hidden">
-                    <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20`}></div>
-                    <Image
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      width={300}
-                      height={200}
-                      className="w-full h-40 md:h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <Button
-                      size="icon"
-                      className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm border-white/30 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white/30 hover:scale-110 w-8 h-8 md:w-10 md:h-10"
-                    >
-                      <ExternalLink className="h-3 w-3 md:h-4 md:w-4 text-white" />
-                    </Button>
-                  </div>
-                  <CardContent className="p-4 md:p-6">
-                    <h3 className="text-lg md:text-xl font-bold mb-2">{project.title}</h3>
-                    <p className={`${isDarkMode ? "text-gray-400" : "text-gray-600"} mb-4 text-sm md:text-base`}>
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((tech) => (
-                        <Badge
-                          key={tech}
-                          variant="secondary"
-                          className={`${isDarkMode ? "bg-white/10 text-white" : "bg-black/10 text-black"} hover:scale-105 transition-transform duration-200 text-xs`}
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            {/* Mobile Horizontal Scroll */}
-            <div className="md:hidden px-4">
-              <div className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-4 px-4">
-                {projects.map((project, index) => (
-                  <Card
-                    key={project.title}
-                    className={`group ${isDarkMode ? "bg-white/5 border-white/10" : "bg-black/5 border-black/10"} backdrop-blur-sm border overflow-hidden flex-shrink-0 w-72 min-w-[288px] snap-start`}
-                  >
-                    <div className="relative overflow-hidden">
-                      <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20`}></div>
-                      <Image
-                        src={project.image || "/placeholder.svg"}
-                        alt={project.title}
-                        width={300}
-                        height={200}
-                        className="w-full h-48 object-cover"
-                      />
-                      <Button
-                        size="icon"
-                        className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm border-white/30 w-10 h-10"
-                      >
-                        <ExternalLink className="h-4 w-4 text-white" />
-                      </Button>
-                    </div>
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                      <p className={`${isDarkMode ? "text-gray-400" : "text-gray-600"} mb-4`}>{project.description}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {project.tech.map((tech) => (
-                          <Badge
-                            key={tech}
-                            variant="secondary"
-                            className={`${isDarkMode ? "bg-white/10 text-white" : "bg-black/10 text-black"} text-xs`}
-                          >
-                            {tech}
-                          </Badge>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+       
 
         {/* Tech Stack Carousel Section */}
         <section className="py-16 md:py-20 px-4">
           <div className="w-full max-w-[96%] 2xl:max-w-[96%] mx-auto">
             <div className="text-center mb-12 md:mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl pb-2 font-bold mb-4 bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
                 Technology Stack
               </h2>
               <p className={`text-lg md:text-xl max-w-2xl mx-auto ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>
