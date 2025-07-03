@@ -19,6 +19,7 @@ import {
     MessageCircle,
     Phone,
 } from "lucide-react";
+import { SectionWrapper } from "@/components/section-wrapper";
 interface ContactSectionProps {
     isDarkMode: boolean;
 
@@ -58,20 +59,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
             icon: <ExternalLink className="w-5 h-5" />,
         },]
     return (
-
-        <section id="contact" className="min-h-screen py-16 md:py-20 px-4 scroll-animate">
-            <div className="w-full max-w-[96%] 2xl:max-w-[96%] mx-auto">
-                <div className="text-center mb-12 md:mb-16 animate-fade-in-up">
-                    <GradientHeading text="Get In Touch"
-                        fromColor="from-orange-600"
-                        toColor="to-red-600" />
-
-                    <p className={`text-lg md:text-xl max-w-2xl mx-auto ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>
-                        Ready to bring your mobile app idea to life? Let's discuss your project!
-                    </p>
-                </div>
-
-                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 px-4 sm:px-6">
+<SectionWrapper
+  id="contact"
+  title="Get In Touch"
+  description=" Ready to bring your mobile app idea to life? Let's discuss your project!"
+  fromColor="from-blue-600"
+  toColor="to-purple-600"
+  isDarkMode={isDarkMode}
+><div className="grid lg:grid-cols-2 gap-8 lg:gap-12 px-4 sm:px-6">
                     {/* Contact Info */}
                     <div className="space-y-6 md:space-y-8 animate-fade-in-left">
                         <div
@@ -247,8 +242,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                             </CardContent>
                         </Card>
                     </div>
-                </div>
-            </div>
-        </section>
+                </div></SectionWrapper>
+       
     );
 };

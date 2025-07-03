@@ -1,3 +1,4 @@
+
 interface BackgroundAnimationProps {
   isDarkMode: boolean;
 
@@ -31,20 +32,42 @@ export const BackgroundAnimation: React.FC<BackgroundAnimationProps> = ({
       ))}
 
       {/* Floating Particles */}
-      {[...Array(20)].map((_, i) => (
-        <div
-          key={`particle-${i}`}
-          className="absolute w-1 h-1 rounded-full opacity-40 dark:opacity-60"
-          style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
+    {[...Array(15)].map((_, i) => {
+  const colorClasses = [
+    "bg-blue-500",
+    "bg-purple-500",
+    "bg-pink-500",
+    "bg-cyan-500",
+    "bg-yellow-400",
+  ]
 
-            backgroundColor: isDarkMode ? "white" : "black",
-            animation: `particle-float ${Math.random() * 12 + 8}s linear infinite`,
-            animationDelay: `${Math.random() * 8}s`,
-          }}
-        />
-      ))}
+  const sizeClasses = [
+    "w-1 h-1",
+    "w-2 h-2",
+    "w-3 h-3",
+    "w-4 h-4",
+  ]
+
+  const color = colorClasses[Math.floor(Math.random() * colorClasses.length)]
+  const size = sizeClasses[Math.floor(Math.random() * sizeClasses.length)]
+  const delay = `${Math.floor(Math.random() * 3000)}ms`
+  const duration = `${Math.floor(Math.random() * 10 + 10)}s`
+
+  return (
+    <div
+      key={`particle-${i}`}
+      className={`absolute rounded-full opacity-12 ${color} ${size} random-move`}
+      style={{
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        animationDelay: delay,
+        animationDuration: duration,
+      }}
+    />
+  )
+})}
+
+
 
       {/* Grid Pattern */}
       <div

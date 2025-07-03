@@ -1,19 +1,14 @@
 "use client"
 
-
 import { useEffect, useState } from "react";
 
-import { contactInfo } from "@/constants/contact";
 
 import { BackgroundAnimation } from "@/components/portfolio/backgroundAnimation";
-import { MainContent } from "@/components/portfolio/mainContent";
+import { MainContent } from "@/components/portfolio/main-content";
 import { Footer } from "@/components/portfolio/portfolioFooter";
 import { Header } from "@/components/portfolio/portfolioHeader";
-import {
-  Github,
-  Linkedin,
-  Twitter,
-} from "lucide-react";
+import ScrollProgress from "@/components/scroll-progress";
+
 
 export default function Portfolio() {
 
@@ -23,16 +18,13 @@ export default function Portfolio() {
   const [isLoaded, setIsLoaded] = useState(false)
   const navItems = [
     { id: "home", label: "Home", color: "hover:text-blue-500" },
-    { id: "about", label: "About", color: "hover:text-green-500" },
+    { id: "about", label: "About", color: "hover:text-red-500" },
+    {id:"services",label:"Service", color: "hover:text-green-500"},
     { id: "projects", label: "Projects", color: "hover:text-purple-500" },
     { id: "contact", label: "Contact", color: "hover:text-orange-500" },
+
   ]
 
-  const socialLinks = [
-    { icon: Twitter, href: "#", label: "Twitter", color: "#1DA1F2" },
-    { icon: Github, href: contactInfo.github, label: "GitHub", color: "#333" },
-    { icon: Linkedin, href: contactInfo.linkedin, label: "LinkedIn", color: "#0077B5" },
-  ]
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -40,25 +32,19 @@ export default function Portfolio() {
       element.scrollIntoView({ behavior: "smooth" })
     }
     setMobileMenuOpen(false)
-    setActiveSection(sectionId)
+   // setActiveSection(sectionId)
   }
-
-  //Mouse tracking for interactive lines
-  // useEffect(() => {
-  //   const handleMouseMove = (e: MouseEvent) => {
-  //     setMousePosition({ x: e.clientX, y: e.clientY })
-  //   }
-
-  //   window.addEventListener("mousemove", handleMouseMove)
-  //   return () => window.removeEventListener("mousemove", handleMouseMove)
-  // }, [])
 
   // Loading animation
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 1500)
     return () => clearTimeout(timer)
   }, [])
+const [mounted, setMounted] = useState(false)
 
+useEffect(() => {
+  setMounted(true)
+}, [])
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add("dark")
@@ -86,7 +72,7 @@ export default function Portfolio() {
           const offsetHeight = element.offsetHeight
 
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section.id)
+           setActiveSection(section.id)
             
             break
           }
@@ -157,6 +143,8 @@ export default function Portfolio() {
     <div
       className={`min-h-screen transition-all duration-500 ${isDarkMode ? "bg-black text-white" : "bg-white text-black"}`}
     >
+           <ScrollProgress/>
+      
       {/* Animated Background */}
       <BackgroundAnimation isDarkMode={isDarkMode}/>
 
@@ -167,7 +155,7 @@ export default function Portfolio() {
         navItems={navItems}
         activeSection={activeSection}
         scrollToSection={scrollToSection}
-        socialLinks={socialLinks}
+       
         mobileMenuOpen={mobileMenuOpen}
         setMobileMenuOpen={setMobileMenuOpen}
       />
