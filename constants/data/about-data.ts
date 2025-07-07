@@ -50,7 +50,7 @@ export const achievementBadges = [
 ]
 
 export const profileImageData = {
-  src: "/images/developer.png?height=300&width=300",
+  src: "/images/developer.webp?height=300&width=300",
   alt: "Developer Profile",
   width: 300,
   height: 300,

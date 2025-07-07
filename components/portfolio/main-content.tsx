@@ -3,7 +3,7 @@ import { AboutSection } from "./section/about-section";
 import { ContactSection } from "./section/contact-section";
 import { FeatureProjectsSection } from "./section/projects-section";
 import { HeroSection } from "./section/hero-section";
-import { TestimonialSection } from "./section/testimonial";
+import { TestimonialSection } from "./section/testimonial-section";
 import { ServicesSection } from './section/service-section';
 import ParticleBackground from "../particle-background";
 import CreativeCursor from "../creative-cursor";
@@ -21,7 +21,7 @@ export const MainContent: React.FC<MainContentProps> = ({
 
     <main className="relative z-10 ">
        {/* <ParticleBackground /> */}
-      <CreativeCursor />
+      {/* <CreativeCursor /> */}
       {/* Hero Section */}
       <HeroSection scrollToSection={scrollToSection} />
 

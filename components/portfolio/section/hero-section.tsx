@@ -166,9 +166,9 @@ className={`relative z-20 text-lg md:text-xl font-medium text-purple-700 dark:te
               </div>
 
               {/* Floating Elements */}
-              <div className="absolute top-20 right-8 w-4 h-4 bg-blue-500 rounded-full animate-bounce opacity-60" />
+              {/* <div className="absolute top-20 right-8 w-4 h-4 bg-blue-500 rounded-full animate-bounce opacity-60" />
               <div className="absolute bottom-20 left-8 w-3 h-3 bg-purple-500 rounded-full animate-bounce delay-1000 opacity-60" />
-              <div className="absolute top-1/2 right-4 w-2 h-2 bg-pink-500 rounded-full animate-pulse opacity-60" />
+              <div className="absolute top-1/2 right-4 w-2 h-2 bg-pink-500 rounded-full animate-pulse opacity-60" /> */}
             </div>
           </div>
         </div>

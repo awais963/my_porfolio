@@ -33,11 +33,11 @@ export const BackgroundAnimation: React.FC<BackgroundAnimationProps> = ({
       {/* Floating Particles */}
     {[...Array(15)].map((_, i) => {
   const colorClasses = [
-    "bg-blue-500",
-    "bg-purple-500",
-    "bg-pink-500",
-    "bg-cyan-500",
-    "bg-yellow-400",
+   "bg-[rgba(59,130,246,0.2)]", // blue-500 with 5% alpha
+  "bg-[rgba(168,85,247,0.2)]", // purple-500
+  "bg-[rgba(236,72,153,0.2)]", // pink-500
+  "bg-[rgba(6,182,212,0.2)]",  // cyan-500
+  "bg-[rgba(250,204,21,0.2)]", // yellow-400
   ]
 
   const sizeClasses = [
@@ -55,7 +55,7 @@ export const BackgroundAnimation: React.FC<BackgroundAnimationProps> = ({
   return (
     <div
       key={`particle-${i}`}
-      className={`absolute rounded-full opacity-12 ${color} ${size} random-move`}
+  className={`absolute rounded-full ${color} ${size} random-move`}
       style={{
         left: `${Math.random() * 100}%`,
         top: `${Math.random() * 100}%`,

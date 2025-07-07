@@ -34,13 +34,13 @@ export const TestimonialSection: React.FC<TestimonialSectionProps> = ({
     }
   }, [])
   return (
-     <SectionWrapper
-              id={currentSection.id}
-              title={currentSection.title}
-                    subTitle={currentSection.subtitle}
-              description={currentSection.description}
-             
-            >
+    <SectionWrapper
+      id={currentSection.id}
+      title={currentSection.title}
+      subTitle={currentSection.subtitle}
+      description={currentSection.description}
+
+    >
       <div className="relative max-w-4xl mx-auto">
 
         <div className="overflow-hidden">
@@ -51,12 +51,12 @@ export const TestimonialSection: React.FC<TestimonialSectionProps> = ({
             {testimonials.map((testimonial, index) => (
               <div key={testimonial.name} className="w-full flex-shrink-0">
                 <Card
-                  className={`bg-black/5 border-black/10 backdrop-blur-sm border mx-4`}
+                  className={`bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 backdrop-blur-xl backdrop-blur-sm border mx-4`}
                 >
                   <CardContent className="p-8 text-center">
                     <Quote className="w-12 h-12 mx-auto mb-6 text-blue-500 opacity-50" />
                     <p
-                      className={`text-lg md:text-xl leading-relaxed mb-6 text-gray-700`}
+                      className={`text-lg md:text-xl leading-relaxed mb-6 text-gray-700 dark:text-gray-300`}
                     >
                       "{testimonial.text}"
                     </p>
@@ -110,7 +110,7 @@ export const TestimonialSection: React.FC<TestimonialSectionProps> = ({
                 onClick={() => setCurrentTestimonialSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentTestimonialSlide
                   ? "bg-pink-500 scale-125"
-                  :  "bg-gray-300"
+                  : "bg-gray-300"
                   }`}
               />
             ))}
