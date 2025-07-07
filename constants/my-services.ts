@@ -15,7 +15,7 @@ export const services = [
       "Responsive UI/UX design",
       "App Store & Play Store deployment",
     ],
-        iconColor: "bg-gradient-to-br from-indigo-500 to-indigo-600",
+iconColor: "text-blue-500",
 
   },
   {
@@ -32,7 +32,7 @@ export const services = [
       "Remote control optimization",
       "Google Play Console publishing",
     ],
-        iconColor: "bg-gradient-to-br from-indigo-500 to-indigo-600",
+iconColor: "text-red-500",
 
   },
   {
@@ -49,7 +49,7 @@ export const services = [
       "AI API integrations",
       "Data analysis and insights",
     ],
-        iconColor: "bg-gradient-to-br from-indigo-500 to-indigo-600",
+        iconColor: "text-green-500",
 
   },
   {
@@ -66,7 +66,7 @@ export const services = [
       "Database integration",
       "Authentication & authorization",
     ],
-        iconColor: "bg-gradient-to-br from-indigo-500 to-indigo-600",
+        iconColor: "text-orange-500",
 
   },
   {
@@ -83,7 +83,7 @@ export const services = [
       "Cloud deployment & scaling",
       "Microservices architecture",
     ],
-        iconColor: "bg-gradient-to-br from-indigo-500 to-indigo-600",
+        iconColor: "text-purple-500",
 
   },
 ]

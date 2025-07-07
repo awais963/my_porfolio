@@ -1,11 +1,9 @@
 
 interface BackgroundAnimationProps {
-  isDarkMode: boolean;
 
 }
 
 export const BackgroundAnimation: React.FC<BackgroundAnimationProps> = ({
-  isDarkMode,
 
 }) => {
   return (
@@ -21,9 +19,10 @@ export const BackgroundAnimation: React.FC<BackgroundAnimationProps> = ({
             top: `${Math.random() * 100}%`,
             width: `${Math.random() * 150 + 75}px`,
             height: "1px",
-            background: isDarkMode
-              ? "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent)"
-              : "linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.3), transparent)",
+            // background: isDarkMode
+            //   ? "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent)"
+            //   : "linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.3), transparent)",
+            background:"linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.3), transparent)",
             transform: `rotate(${Math.random() * 360}deg) translateX(${Math.random() * 8 + 4}px) translateY(${Math.random() * 12 + 4}px)`,
             animation: `float ${Math.random() * 8 + 4}s ease-in-out infinite`,
             animationDelay: `${Math.random() * 4}s`,
@@ -73,7 +72,9 @@ export const BackgroundAnimation: React.FC<BackgroundAnimationProps> = ({
       <div
         className="absolute inset-0 opacity-15 dark:opacity-10"
         style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, ${isDarkMode ? "white" : "black"} 1px, transparent 0)`,
+          // backgroundImage: `radial-gradient(circle at 1px 1px, ${isDarkMode ? "white" : "black"} 1px, transparent 0)`,
+                    backgroundImage: `radial-gradient(circle at 1px 1px,  "black"} 1px, transparent 0)`,
+
           backgroundSize: "40px 40px",
         }}
       />

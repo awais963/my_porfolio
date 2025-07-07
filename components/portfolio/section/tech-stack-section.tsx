@@ -40,13 +40,12 @@ const currentSection = sectionContent.techStack
 
   return (
      <SectionWrapper
-          id={currentSection.id}
-          title={currentSection.title}
-          description={currentSection.description}
-          fromColor={currentSection.gradientFrom}
-          toColor={currentSection.gradientTo}
-          isDarkMode={isDarkMode}
-    >
+              id={currentSection.id}
+              title={currentSection.title}
+                    subTitle=""
+              description={currentSection.description}
+             
+            >
       <div className="relative">
         <div className="overflow-hidden rounded-2xl">
         <div

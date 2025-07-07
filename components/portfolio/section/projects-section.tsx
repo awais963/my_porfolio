@@ -8,17 +8,22 @@ import { SectionWrapper } from "@/components/section-wrapper";
 import { sectionContent } from "@/constants/section-content";
 
 interface FeatureProjectsSectionProps {
-  isDarkMode: boolean;
 }
 
 
-export const FeatureProjectsSection: React.FC<FeatureProjectsSectionProps> = ({ isDarkMode }) => {
+export const FeatureProjectsSection: React.FC<FeatureProjectsSectionProps> = ({  }) => {
   const [activeTab, setActiveTab] = useState("All")
   const currentSection = sectionContent.projects
   const tabs = ["All", "Mobile", "Flutter", "iOS",]
   const filteredProjects = activeTab === "All" ? projects : projects.filter((project) => project.category === activeTab)
   return (
-    <SectionWrapper isDarkMode={isDarkMode} id={currentSection.id} title={currentSection.title} description={currentSection.description} fromColor={currentSection.gradientFrom} toColor={currentSection.gradientTo}>
+    <SectionWrapper
+              id={currentSection.id}
+              title={currentSection.title}
+                    subTitle={currentSection.subtitle}
+              description={currentSection.description}
+             
+            >
        {/* Tabs */}
         {/* <div className="flex justify-center mb-12">
           <div className="bg-gray-100 dark:bg-gray-800 rounded-2xl p-2 inline-flex gap-1">

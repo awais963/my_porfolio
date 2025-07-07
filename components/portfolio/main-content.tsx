@@ -10,12 +10,10 @@ import CreativeCursor from "../creative-cursor";
 import ScrollProgress from "../scroll-progress";
 
 interface MainContentProps {
-  isDarkMode: boolean;
   scrollToSection: (id: string) => void;
 }
 
 export const MainContent: React.FC<MainContentProps> = ({
-  isDarkMode,
   scrollToSection,
 }) => {
 
@@ -25,21 +23,21 @@ export const MainContent: React.FC<MainContentProps> = ({
        {/* <ParticleBackground /> */}
       <CreativeCursor />
       {/* Hero Section */}
-      <HeroSection isDarkMode={isDarkMode} scrollToSection={scrollToSection} />
+      <HeroSection scrollToSection={scrollToSection} />
 
       {/* About Section */}
-      <AboutSection isDarkMode={isDarkMode} />
+      <AboutSection />
      
- <ServicesSection isDarkMode={isDarkMode}/>
+ <ServicesSection />
       {/* Enhanced Projects Carousel Section */}
-      <FeatureProjectsSection isDarkMode={isDarkMode} />
+      <FeatureProjectsSection />
 
       {/* Testimonials Carousel Section */}
-      <TestimonialSection isDarkMode={isDarkMode} />
+      <TestimonialSection />
 
     
       {/* Contact Section */}
-      <ContactSection isDarkMode={isDarkMode} />
+      <ContactSection  />
     </main>
   );
 };

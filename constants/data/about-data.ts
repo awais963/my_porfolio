@@ -4,14 +4,14 @@ import { Star, Code, Users, } from "lucide-react"
 export const statsData = [
   {
     label: "Projects Completed",
-    value: "50+",
+    value: "10+",
     icon: Code,
     color: "text-blue-500",
     bg: "bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20",
   },
   {
     label: "Happy Clients",
-    value: "30+",
+    value: "10+",
     icon: Users,
     color: "text-green-500",
     bg: "bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20",
@@ -24,8 +24,8 @@ export const statsData = [
     bg: "bg-gradient-to-br from-yellow-50 to-yellow-100 dark:from-yellow-900/20 dark:to-yellow-800/20",
   },
   {
-    label: "Awards Won",
-    value: "10+",
+    label: "Social Followers",
+    value: "3000+",
     icon: Award,
     color: "text-purple-500",
     bg: "bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20",
@@ -40,13 +40,13 @@ export const achievementBadges = [
     href: "https://www.hackerrank.com/certificates/794ccb84d359",
     external: true,
   },
-  {
-    icon: TrendingUp,
-    label: "Top Performer",
-    gradient: "bg-gradient-to-r from-green-500 to-teal-600",
-    href: null,
-    external: false,
-  },
+  // {
+  //   icon: TrendingUp,
+  //   label: "Top Performer",
+  //   gradient: "bg-gradient-to-r from-green-500 to-teal-600",
+  //   href: null,
+  //   external: false,
+  // },
 ]
 
 export const profileImageData = {

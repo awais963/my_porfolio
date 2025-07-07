@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { contactInfo } from "@/constants/contact";
 import { useState } from "react";
-
+import { sectionContent } from "@/constants/section-content";
 
 import { GradientHeading } from "@/components/ui/gradient-heading";
 import {
@@ -21,12 +21,10 @@ import {
 } from "lucide-react";
 import { SectionWrapper } from "@/components/section-wrapper";
 interface ContactSectionProps {
-    isDarkMode: boolean;
 
 }
 
 export const ContactSection: React.FC<ContactSectionProps> = ({
-    isDarkMode,
 
 }) => {
     const [copied, setCopied] = useState<string | null>(null)
@@ -58,19 +56,19 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
             url: "https://stackoverflow.com/users/username",
             icon: <ExternalLink className="w-5 h-5" />,
         },]
+        const currentSection = sectionContent.contact
     return (
-<SectionWrapper
-  id="contact"
-  title="Get In Touch"
-  description=" Ready to bring your mobile app idea to life? Let's discuss your project!"
-  fromColor="from-blue-600"
-  toColor="to-purple-600"
-  isDarkMode={isDarkMode}
-><div className="grid lg:grid-cols-2 gap-8 lg:gap-12 px-4 sm:px-6">
+        <SectionWrapper
+              id={currentSection.id}
+              title={currentSection.title}
+                    subTitle={currentSection.subtitle}
+              description={currentSection.description}
+             
+            ><div className="grid lg:grid-cols-2 gap-8 lg:gap-12 px-4 sm:px-6">
                     {/* Contact Info */}
                     <div className="space-y-6 md:space-y-8 animate-fade-in-left">
                         <div
-                            className={`${isDarkMode ? "bg-white/5 border-white/10" : "bg-black/5 border-black/10"} backdrop-blur-sm rounded-2xl p-6 md:p-8 border`}
+                            className={`bg-black/5 border-black/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border`}
                         >
                             <h3 className="text-xl md:text-2xl font-bold mb-6">Contact Information</h3>
                             <div className="space-y-4">
@@ -82,7 +80,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                                         </div>
                                         <div>
                                             <p className="font-medium">Email</p>
-                                            <p className={`${isDarkMode ? "text-gray-400" : "text-gray-600"} text-sm md:text-base`}>
+                                            <p className={`text-gray-600 text-sm md:text-base`}>
                                                 {contactInfo.email}
                                             </p>
                                         </div>
@@ -110,7 +108,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                                         </div>
                                         <div>
                                             <p className="font-medium">Phone</p>
-                                            <p className={`${isDarkMode ? "text-gray-400" : "text-gray-600"} text-sm md:text-base`}>
+                                            <p className={`text-gray-600 text-sm md:text-base`}>
                                                 {contactInfo.phone}
                                             </p>
                                         </div>
@@ -137,7 +135,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                                     </div>
                                     <div>
                                         <p className="font-medium">Location</p>
-                                        <p className={`${isDarkMode ? "text-gray-400" : "text-gray-600"} text-sm md:text-base`}>
+                                        <p className={`text-gray-600 text-sm md:text-base`}>
                                             Pakistan, Lahore Punjab
                                         </p>
                                     </div>
@@ -147,7 +145,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
                         {/* Availability */}
                         <div
-                            className={`${isDarkMode ? "bg-white/5 border-white/10" : "bg-black/5 border-black/10"} backdrop-blur-sm rounded-2xl p-6 md:p-8 border`}
+                            className={`bg-black/5 border-black/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border`}
                         >
                             <div className="flex items-center space-x-4 mb-4">
                                 <div className="bg-green-500/20 p-3 rounded-full">
@@ -172,7 +170,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     {/* Contact Form */}
                     <div className="animate-fade-in-right">
                         <Card
-                            className={`${isDarkMode ? "bg-white/5 border-white/10" : "bg-black/5 border-black/10"} backdrop-blur-sm border`}
+                            className={`bg-black/5 border-black/10 backdrop-blur-sm border`}
                         >
                             <CardContent className="p-6 md:p-8">
                                 {/* Social Links & CTA */}
@@ -220,7 +218,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
                                             <Button
                                                 variant="outline"
-                                                className="w-full"
+                                                className="w-full  bg-gradient-to-r from-green-500 to-teal-500"
                                                 size="lg"
                                                 onClick={() =>
                                                     window.open(`https://wa.me/${contactInfo.phone.replace(/\D/g, "")}`, "_blank")

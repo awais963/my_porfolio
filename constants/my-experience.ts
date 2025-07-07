@@ -1,7 +1,7 @@
 // Sample structure for your experience timeline data
 // Replace with your actual experienceTimeline data
-
 export interface ExperienceItem {
+  id:string
   year: string
   type: string
   title: string
@@ -13,48 +13,88 @@ export interface ExperienceItem {
 
 export const experienceTimeline: ExperienceItem[] = [
   {
+    id:"1",
     year: "2024",
     type: "Current Position",
-    title: "Senior Mobile Developer",
-    company: "Tech Innovation Corp",
+    title: "Software Engineer Mobile Application Developer",
+    company: "Egora Pvt Ltd",
     description:
-      "Leading mobile development initiatives and mentoring junior developers while architecting scalable mobile solutions.",
+      "Developing Kotlin and Flutter-based applications for restaurant ordering and Bluetooth thermal printing.",
     achievements: [
-      "Led development of 3 major mobile applications with 100K+ downloads",
-      "Implemented CI/CD pipeline reducing deployment time by 60%",
-      "Mentored 5 junior developers and established coding standards",
-      "Achieved 99.9% app crash-free rate across all platforms",
+      "Developed Kotlin-based Android app with Jetpack Compose for Bluetooth thermal printers",
+      "Integrated Bluetooth printing with real-time print operations from web content",
+      "Contributed to Egora App (Flutter) for dine-in, pickup, and table reservations",
+      "Implemented cart logic and backend API integration for ordering",
+      "Integrated XStax payment gateway for secure online payments",
+      "Collaborated with cross-functional teams to maintain app performance and usability",
     ],
-    technologies: ["Flutter", "React Native", "Firebase", "AWS", "TypeScript", "GraphQL"],
+    technologies: ["Kotlin", "Flutter", "Jetpack Compose", "Bluetooth API", "Firebase", "XStax API", "REST APIs"]
   },
   {
+     id:"2",
     year: "2022",
     type: "Career Growth",
-    title: "Mobile Developer",
-    company: "Digital Solutions Ltd",
+    title: "Software Engineer Android Developer",
+    company: "Healthwire",
     description:
-      "Developed cross-platform mobile applications and collaborated with design teams to create exceptional user experiences.",
+      "Enhanced Android app performance, crash rates, and integrated secure payment gateways.",
     achievements: [
-      "Built 5 successful mobile apps from concept to deployment",
-      "Reduced app loading time by 40% through optimization",
-      "Integrated complex APIs and third-party services",
-      "Maintained 4.8+ star rating across app stores",
+      "Improved performance by 75% and reduced APK size by 30%",
+      "Achieved 9% reduction in crash rates",
+      "Integrated Meezan and Foree payment gateways with 100% security",
+      "Enhanced map features using Google Maps and Places API",
+      "Conducted A/B testing and implemented event tracking",
+      "Ensured 100% user satisfaction with continuous performance optimization"
     ],
-    technologies: ["Flutter", "Dart", "Firebase", "REST APIs", "SQLite", "Git"],
+    technologies: ["Kotlin", "Android SDK", "Retrofit", "Google Maps API", "Firebase", "Crashlytics", "Analytics"]
   },
   {
+     id:"3",
+    year: "2020",
+    type: "Professional Growth",
+    title: "Senior Android Developer",
+    company: "DonGamers",
+    description:
+      "Led mobile development and improved app stability, performance, and monetization.",
+    achievements: [
+      "Achieved 90% crash-free rate through bug fixing",
+      "Integrated Pusher for chat and Unity for in-app games",
+      "Merged In-App Purchases and AdMob for monetization",
+      "Boosted user engagement and sales by 10%"
+    ],
+    technologies: ["Kotlin", "MVVM", "Jetpack", "Pusher", "Unity", "Google AdMob", "In-App Purchases"]
+  },
+  {
+     id:"4",
     year: "2020",
     type: "Career Start",
-    title: "Junior Mobile Developer",
-    company: "StartUp Ventures",
+    title: "Android Developer",
+    company: "DonGamers",
     description:
-      "Started my professional journey in mobile development, learning industry best practices and contributing to innovative projects.",
+      "Built and maintained the DonGamers app with modern Android practices and API integrations.",
     achievements: [
-      "Successfully completed 10+ mobile app features",
-      "Learned and implemented modern development practices",
-      "Collaborated effectively with cross-functional teams",
-      "Contributed to open-source mobile development projects",
+      "Developed the app from scratch and scaled to a global audience",
+      "Enhanced responsiveness and reliability by 95%",
+      "Integrated external APIs with fast response times (up to 700ms)",
+      "Used Jetpack, Kotlin Coroutines, and MVVM architecture for modern app design"
     ],
-    technologies: ["React Native", "JavaScript", "Node.js", "MongoDB", "Redux"],
+    technologies: ["Kotlin", "MVVM", "Coroutines", "Jetpack Libraries", "Retrofit"]
   },
-]
+  {
+     id:"5",
+    year: "2019",
+    type: "Internship",
+    title: "Android Developer Intern",
+    company: "NetRoots Technologies LLC",
+    description:
+      "Worked on employee attendance, profile management, and leave systems with GPS features.",
+    achievements: [
+      "Built profile management and attendance features",
+      "Integrated GPS and image capture for attendance accuracy",
+      "Simplified leave management, reducing manual effort by 50%",
+      "Delivered monthly attendance reports, improving efficiency by 40%",
+      "Achieved 90% bug-free status through issue resolution"
+    ],
+    technologies: ["Java", "Android SDK", "GPS", "SQLite"]
+  }
+];

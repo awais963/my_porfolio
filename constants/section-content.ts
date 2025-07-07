@@ -1,6 +1,7 @@
 export const sectionContent = {
   about: {
     id: "about",
+    subtitle:"Want to know me?",
     title: "About Me",
     description: "Passionate mobile developer crafting exceptional digital experiences with cutting-edge technologies",
     gradientFrom: "from-blue-600",
@@ -8,53 +9,62 @@ export const sectionContent = {
   },
   services: {
     id: "services",
-    title: "Transforming Ideas Into Digital Solutions",
+        subtitle:"What I can do for you?",
+
+    title: "Services",
     description: "I specialize in creating cutting-edge applications across multiple platforms, from mobile apps to AI-powered solutions, delivering exceptional user experiences.",
     gradientFrom: "from-blue-600",
-    gradientTo: "to-pink-600",
+    gradientTo: "to-purple-600",
   },
   projects: {
     id: "projects",
-    title: "Featured Projects",
+        subtitle:"What I have done?",
+
+    title: "My Projects",
     description: " Showcasing some of my latest mobile applications and development work",
-    gradientFrom: "from-purple-600",
-    gradientTo: "to-pink-600",
+   gradientFrom: "from-blue-600",
+    gradientTo: "to-purple-600",
   },
   contact: {
     id: "contact",
+        subtitle:"Interested in my Services?",
+
     title: "Contact",
-    description: "Let's collaborate and bring your mobile app ideas to life",
-    gradientFrom: "from-orange-600",
-    gradientTo: "to-red-600",
+    description: "Ready to bring your mobile app idea to life? Let's discuss your project!",
+    gradientFrom: "from-blue-600",
+    gradientTo: "to-purple-600",
   },
   testimonials: {
     id: "testimonials",
+        subtitle:"What they say?",
+
     title: "Client Testimonials",
     description: "What clients say about working with me",
-    gradientFrom: "from-pink-600",
-    gradientTo: "to-rose-600",
+    gradientFrom: "from-blue-600",
+    gradientTo: "to-purple-600",
   },
   skills: {
     id: "skills",
     title: "Technical Expertise",
   description: "Mastering the art of mobile development with cutting-edge technologies",
-  gradientFrom: "from-green-500",
-    gradientTo: "to-teal-600",
+  gradientFrom: "from-blue-600",
+    gradientTo: "to-purple-600",
   },
   experience: {
     id: "journey",
+            subtitle:"How long I have been into this?",
+
     title: "Professional Journey",
-  description: "My career progression and key achievements in mobile development",gradientFrom: 
-  "from-orange-500",
-    gradientTo: "to-red-600",
+  description: "My career progression and key achievements in mobile development",
+  gradientFrom: "from-blue-600",
+    gradientTo: "to-purple-600",
   },
    techStack: {
     id: "techStack",
     title: "Technology Stack",
   description: "Cutting-edge technologies I use to build exceptional mobile experiences",
-  gradientFrom: 
- "from-purple-500",
-      gradientTo:"to-pink-600",
+  gradientFrom: "from-blue-600",
+    gradientTo: "to-purple-600",
   },
 }
 

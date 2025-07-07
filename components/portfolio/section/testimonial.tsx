@@ -14,15 +14,13 @@ import {
   Star
 } from "lucide-react";
 interface TestimonialSectionProps {
-  isDarkMode: boolean;
 }
 
 export const TestimonialSection: React.FC<TestimonialSectionProps> = ({
-  isDarkMode,
 
 
 }) => {
-  const currentContent = sectionContent.testimonials
+  const currentSection = sectionContent.testimonials
   const [currentTestimonialSlide, setCurrentTestimonialSlide] = useState(0)
   useEffect(() => {
 
@@ -36,9 +34,13 @@ export const TestimonialSection: React.FC<TestimonialSectionProps> = ({
     }
   }, [])
   return (
-    <SectionWrapper id={currentContent.id} title={currentContent.title} description={currentContent.description}
-     fromColor="from-pink-600"
-     toColor="to-rose-600" isDarkMode={isDarkMode} >
+     <SectionWrapper
+              id={currentSection.id}
+              title={currentSection.title}
+                    subTitle={currentSection.subtitle}
+              description={currentSection.description}
+             
+            >
       <div className="relative max-w-4xl mx-auto">
 
         <div className="overflow-hidden">
@@ -49,12 +51,12 @@ export const TestimonialSection: React.FC<TestimonialSectionProps> = ({
             {testimonials.map((testimonial, index) => (
               <div key={testimonial.name} className="w-full flex-shrink-0">
                 <Card
-                  className={`${isDarkMode ? "bg-white/5 border-white/10" : "bg-black/5 border-black/10"} backdrop-blur-sm border mx-4`}
+                  className={`bg-black/5 border-black/10 backdrop-blur-sm border mx-4`}
                 >
                   <CardContent className="p-8 text-center">
                     <Quote className="w-12 h-12 mx-auto mb-6 text-blue-500 opacity-50" />
                     <p
-                      className={`text-lg md:text-xl leading-relaxed mb-6 ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}
+                      className={`text-lg md:text-xl leading-relaxed mb-6 text-gray-700`}
                     >
                       "{testimonial.text}"
                     </p>
@@ -73,10 +75,10 @@ export const TestimonialSection: React.FC<TestimonialSectionProps> = ({
                       />
                       <div className="text-left">
                         <h4 className="font-bold text-lg">{testimonial.name}</h4>
-                        <p className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
+                        <p className={`text-sm text-gray-600`}>
                           {testimonial.role}
                         </p>
-                        <p className={`text-sm ${isDarkMode ? "text-gray-500" : "text-gray-500"}`}>
+                        <p className={`text-sm text-gray-500`}>
                           {testimonial.company}
                         </p>
                       </div>
@@ -107,10 +109,8 @@ export const TestimonialSection: React.FC<TestimonialSectionProps> = ({
                 key={index}
                 onClick={() => setCurrentTestimonialSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentTestimonialSlide
-                    ? "bg-pink-500 scale-125"
-                    : isDarkMode
-                      ? "bg-gray-600"
-                      : "bg-gray-300"
+                  ? "bg-pink-500 scale-125"
+                  :  "bg-gray-300"
                   }`}
               />
             ))}

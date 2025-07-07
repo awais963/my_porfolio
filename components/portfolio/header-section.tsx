@@ -1,8 +1,8 @@
 
-import type React from "react"
 import { Button } from "@/components/ui/button"
 import { contactInfo } from "@/constants/contact"
 import { headerContent } from "@/constants/data/header-data"
+import type React from "react"
 interface NavItem {
   id: string
   label: string
@@ -49,15 +49,13 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-500 backdrop-blur-xl border-b ${isDarkMode
-          ? "bg-transparent border-white/10 shadow-none"
-          : "bg-transparent border-black/10 shadow-none"
-        }`}
+      className="fixed top-0 w-full z-50 backdrop-blur-xl border-b bg-transparent border-black/10 shadow-none dark:border-white/10"
+
     >
       <div className={"w-full max-w-[96%] 2xl:max-w-[96%] mx-auto px-4 py-4"}>
         <div className="flex items-center justify-between">
           {/* Enhanced Logo */}
-          <a href=""><div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent animate-pulse">
+          <a href="#"><div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent animate-pulse">
             Portfolio
           </div></a>
 
@@ -68,13 +66,11 @@ export const Header: React.FC<HeaderProps> = ({
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`relative pb-2 px-3 py-2 font-medium transition-all duration-300 text-sm lg:text-base rounded-lg hover:scale-105 ${activeSection === item.id
-                    ? "text-blue-600 dark:text-purple-400 bg-blue-100 dark:bg-purple-900/20"
-                    : `${isDarkMode
-                      ? "text-gray-300 hover:text-white hover:bg-gray-100/10"
-                      : "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50"
-                    } ${item.color}`
-                  }`}
+                className={`relative pb-2 px-3 py-2 font-medium  duration-300 text-sm lg:text-base rounded-lg hover:scale-105
+  ${activeSection === item.id
+                    ? "text-blue-600 dark:text-purple-400"
+                    : `text-gray-700 hover:text-gray-900 hover:bg-gray-100/50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-100/10 ${item.color}`}`}
+
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {item.label}
@@ -159,11 +155,11 @@ export const Header: React.FC<HeaderProps> = ({
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
                   className={`block w-full text-left px-4 py-3 rounded-xl transition-all duration-300 mb-2 font-medium ${activeSection == item.id
-                      ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg transform scale-[1.02]"
-                      : `${isDarkMode
-                        ? "text-white hover:bg-gray-800/70 hover:text-blue-300"
-                        : "text-gray-900 hover:bg-gray-100/70 hover:text-blue-600"
-                      } hover:transform hover:scale-[1.01]`
+                    ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg transform scale-[1.02]"
+                    : `${isDarkMode
+                      ? "text-white hover:bg-gray-800/70 hover:text-blue-300"
+                      : "text-gray-900 hover:bg-gray-100/70 hover:text-blue-600"
+                    } hover:transform hover:scale-[1.01]`
                     }`}
                   style={{ animationDelay: `${index * 100}ms` }}
                 >

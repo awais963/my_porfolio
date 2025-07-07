@@ -45,7 +45,7 @@ export default function CreativeCursor() {
     <>
       {/* Main cursor dot */}
       <motion.div
-        className="fixed top-0 left-0 w-4 h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full pointer-events-none z-50 mix-blend-difference"
+        className="hidden md:block fixed top-0 left-0 w-4 h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full pointer-events-none z-50 mix-blend-difference"
         animate={{
           x: mousePosition.x - 8,
           y: mousePosition.y - 8,
@@ -56,7 +56,7 @@ export default function CreativeCursor() {
 
       {/* Trailing cursor ring */}
       <motion.div
-        className="fixed top-0 left-0 w-10 h-10 border-2 border-purple-400 rounded-full pointer-events-none z-50 mix-blend-difference"
+        className="hidden md:block fixed top-0 left-0 w-10 h-10 border-2 border-purple-400 rounded-full pointer-events-none z-50 mix-blend-difference"
         animate={{
           x: mousePosition.x - 20,
           y: mousePosition.y - 20,
@@ -68,7 +68,7 @@ export default function CreativeCursor() {
 
       {/* Outer glow ring */}
       <motion.div
-        className="fixed top-0 left-0 w-16 h-16 border border-pink-300 rounded-full pointer-events-none z-50 mix-blend-screen"
+        className="hidden md:block fixed top-0 left-0 w-16 h-16 border border-pink-300 rounded-full pointer-events-none z-50 mix-blend-screen"
         animate={{
           x: mousePosition.x - 32,
           y: mousePosition.y - 32,
